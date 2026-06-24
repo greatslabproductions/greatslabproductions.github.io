@@ -190,3 +190,43 @@ footer {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+/* --- Mobile Safety Patch (Fixes Horizontal Scroll) --- */
+@media (max-width: 768px) {
+    body {
+        padding: 0 15px; /* Slightly tighter padding to maximize screen space */
+        overflow-x: hidden; /* Hard block against unexpected side scrolling */
+    }
+
+    .container {
+        padding: 40px 0; /* Brings the huge 80px top/bottom padding down to a sensible size on phones */
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem; /* Drops the massive 2.8rem text down so words don't clip and force the screen wide */
+    }
+
+    nav {
+        flex-direction: column; /* Stacks the logo above the links instead of crushing them sideways */
+        gap: 15px;
+        padding: 15px 0;
+        margin-bottom: 30px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center; /* Centers navigation links on mobile */
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Forces cards to stack vertically in a clean single column */
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    form {
+        padding: 20px; /* Gives you more internal space inside the forms on narrow displays */
+    }
+}
