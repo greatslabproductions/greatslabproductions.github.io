@@ -22,19 +22,49 @@
 
         <main>
             <h1>Zero-Risk Event Sourcing.</h1>
-            <p class="subtitle">We take the administration, financial liability, and promotional burden entirely off the venue's plate.</p>
+            <p class="subtitle">We take the administrative, promotional, and financial liabilities completely off your plate. Submit your room specs to schedule a routing consult.</p>
             
-            <h2>Our Venue Commitments</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Guaranteed Footprint</h3>
-                    <p>Targeted, localized marketing loops ensure aggressive turnouts tailored to your specific room capacity.</p>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                <input type="hidden" name="subject" value="[Venue Routing Consult] New Inquiry">
+                <input type="hidden" name="from_name" value="Great Slab Venue Portal">
+
+                <div class="form-group">
+                    <label for="venue-name">Venue Name</label>
+                    <input type="text" id="venue-name" name="Venue Name" required placeholder="e.g., The Dark Room">
                 </div>
-                <div class="card">
-                    <h3>Professional Production</h3>
-                    <p>Full technical oversight, dedicated sound engineering, and flawless scheduling compliance come standard.</p>
+
+                <div class="form-group">
+                    <label for="location">Location / City</label>
+                    <input type="text" id="location" name="Location" required placeholder="e.g., Preston, Lancashire">
                 </div>
-            </div>
+
+                <div class="form-group">
+                    <label for="capacity">Safe Technical Capacity</label>
+                    <input type="number" id="capacity" name="Technical Capacity" required placeholder="e.g., 120">
+                </div>
+
+                <div class="form-group">
+                    <label for="pa-system">In-House PA System Status</label>
+                    <select id="pa-system" name="PA System Status" required>
+                        <option value="" disabled selected>Select PA infrastructure option...</option>
+                        <option value="Full in-house PA installed">Full Professional In-House PA Installed</option>
+                        <option value="Vocal PA only">Vocal PA Only (Requires external reinforcement)</option>
+                        <option value="No PA system">No PA System (Promoter must supply production)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="engineer">Sound Engineer Provision</label>
+                    <select id="engineer" name="Sound Engineer Provision" required>
+                        <option value="" disabled selected>Is an engineer included in baseline terms?</option>
+                        <option value="House engineer included">Yes - Qualified house engineer included</option>
+                        <option value="Dry hire - no engineer">No - Dry room hire only (External engineer required)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Submit Routing Inquiry</button>
+            </form>
         </main>
 
         <footer>&copy; 2026 Great Slab Productions. All Rights Reserved.</footer>
