@@ -39,11 +39,8 @@ nav {
     margin-bottom: 60px;
 }
 
-nav .logo {
-    font-size: 1.1rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+nav .logo-container img {
+    display: block;
 }
 
 nav ul {
@@ -114,7 +111,7 @@ h2 {
     font-size: 0.95rem;
 }
 
-/* --- CTA Buttons --- */
+/* --- CTA Buttons & Submits --- */
 .btn {
     display: inline-block;
     background: var(--text-primary);
@@ -133,19 +130,9 @@ h2 {
     background: var(--accent-hover);
 }
 
-footer {
-    margin-top: 100px;
-    border-top: 1px solid var(--border-color);
-    padding-top: 30px;
-    color: var(--text-secondary);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
 /* --- Pro Intake Form Styling --- */
 form {
-    margin-top: 30px;
+    margin-top: 40px;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     padding: 40px;
@@ -192,4 +179,14 @@ form .btn {
     cursor: pointer;
     width: 100%;
     margin-top: 10px;
+}
+
+footer {
+    margin-top: 100px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 30px;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
