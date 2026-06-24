@@ -22,19 +22,46 @@
 
         <main>
             <h1>Built By Musicians. For Musicians.</h1>
-            <p class="subtitle">We don't believe in predatory booking practices. We provide transparent, honest structures that respect touring artists.</p>
+            <p class="subtitle">We don't believe in predatory booking practices. Drop your specs below to join our active rotation for upcoming Northwest showcases.</p>
             
-            <h2>The Standard Roster Package</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Transparent Financials</h3>
-                    <p>We work on guaranteed minimum expenses vs. aggressive post-break-even profit splits.</p>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="d332babf-e81d-4b8d-9658-af112f1e1b11">
+                <input type="hidden" name="subject" value="[Artist Roster Application] New Submission">
+                <input type="hidden" name="from_name" value="Great Slab Roster Portal">
+
+                <div class="form-group">
+                    <label for="band-name">Band / Artist Name</label>
+                    <input type="text" id="band-name" name="Band Name" required placeholder="e.g., Crown of Anguish">
                 </div>
-                <div class="card">
-                    <h3>100% Merch Retention</h3>
-                    <p>Great Slab Productions enforces a strict zero-commission policy on all band merchandise sales.</p>
+
+                <div class="form-group">
+                    <label for="genre">Sub-Genre / Style</label>
+                    <input type="text" id="genre" name="Genre" required placeholder="e.g., Progressive Death Metal / Heavy Alternative">
                 </div>
-            </div>
+
+                <div class="form-group">
+                    <label for="hometown">Hometown / Base</label>
+                    <input type="text" id="hometown" name="Hometown" required placeholder="e.g., Preston / Manchester">
+                </div>
+
+                <div class="form-group">
+                    <label for="audio-link">Active Live Audio/Video Link</label>
+                    <input type="url" id="audio-link" name="Streaming Link" required placeholder="Bandcamp, Spotify, or YouTube link">
+                </div>
+
+                <div class="form-group">
+                    <label for="draw">Estimated Local Draw (Lancashire/Regional)</label>
+                    <select id="draw" name="Estimated Draw" required>
+                        <option value="" disabled selected>Select your average local draw...</option>
+                        <option value="Under 20 feds">Grassroots / Emerging (Under 20)</option>
+                        <option value="20-40 feds">Established Local (20–40)</option>
+                        <option value="40-70 feds">Regional Touring Draw (40–70)</option>
+                        <option value="70+ feds">Headline Tier (70+)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Submit Roster Application</button>
+            </form>
         </main>
 
         <footer>&copy; 2026 Great Slab Productions. All Rights Reserved.</footer>
